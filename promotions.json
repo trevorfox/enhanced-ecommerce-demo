@@ -1,0 +1,18 @@
+[
+  {
+    "id": "apple-banner",
+    "productId": "1",
+    "name": "An apple a day is good for you",
+    "creative": "cutting board",
+    "image": "img/apples.jpg",
+    "position": "slot-1"
+  },
+  {
+    "id": "cookie-banner",
+    "productId": "2",
+    "name": "Have a cookie!",
+    "creative": "fresh baked",
+    "image": "img/cookies.jpg",
+    "position": "slot-2"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Potatoes",
+    "brand": "Healthy Inc",
+    "category": "Vegetables",
+    "variant": "Red",
+    "price": "20"
+  },
+  {
+    "name": "Apples",
+    "brand": "Healthy Inc",
+    "category": "Fruit",
+    "variant": "Green",
+    "price": "25"
+  },
+  {
+    "name": "Cookies",
+    "brand": "Baker United",
+    "category": "Bread",
+    "variant": "Sweet",
+    "price": "40"
+  }
+]
