@@ -2,21 +2,21 @@
   {
     "name": "Potatoes",
     "brand": "Healthy Inc",
-    "category": "Vegetables",
+    "category": "Food/Vegetables",
     "variant": "Red",
     "price": "20"
   },
   {
     "name": "Apples",
     "brand": "Healthy Inc",
-    "category": "Fruit",
+    "category": "Food/Fruit",
     "variant": "Green",
     "price": "25"
   },
   {
     "name": "Cookies",
     "brand": "Baker United",
-    "category": "Bread",
+    "category": "Food/Snacks",
     "variant": "Sweet",
     "price": "40"
   }

@@ -1,14 +1,17 @@
 $(document).ready(function() {
+
   /* Product Click */
   $('body').on('click', ".products__item__link", function(event) {
     var id = $(this).data('id');
+    var position = $(this).data('position');
     var listname = $(this).parent().parent().data('listname');
     var url = $(this).prop('href');
     $.getJSON("functions/productData.php?id=" + id, function(productData) {
-      productClick(listname, productData.name, id, productData.price, productData.brand, productData.category, productData.variant, url);
+      productClick(listname, productData.name, id, productData.price, productData.brand, productData.category, productData.variant, position, url);
     });
     event.preventDefault();
   });
+
   /* Product Add */
   $('body').on('click', ".productAdd", function() {
     var id = $(this).data('id');
@@ -19,6 +22,7 @@ $(document).ready(function() {
     });
     event.preventDefault();
   });
+
   /* Product Remove */
   $('body').on('click', ".cart__item", function() {
     var id = $(this).data('id');
@@ -31,6 +35,7 @@ $(document).ready(function() {
     });
     event.preventDefault();
   });
+
   /* Promotion Click */
   $('body').on('click', ".promotion", function(event) {
     var id = $(this).data('id');
@@ -40,6 +45,7 @@ $(document).ready(function() {
     });
     event.preventDefault();
   });
+
   /* Submit form */
   $('body').on('submit', ".pay", function(event) {
     console.log("test");
@@ -48,12 +54,13 @@ $(document).ready(function() {
     var checkoutOption = $('input[name=method]:checked').val();
     addCheckoutOption(payForm, step, checkoutOption);
   });
+
 });
 
 
 
 
-function productClick(listname, name, id, price, brand, category, variant, url) {
+function productClick(listname, name, id, price, brand, category, variant, position, url) {
   dataLayer.push({
     'event': 'productClick',
     'ecommerce': {
@@ -67,7 +74,8 @@ function productClick(listname, name, id, price, brand, category, variant, url) 
           'price': price,
           'brand': brand,
           'category': category,
-          'variant': variant
+          'variant': variant,
+          'position': position
         }]
       }
     },
